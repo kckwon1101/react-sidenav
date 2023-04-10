@@ -1,9 +1,10 @@
 import './App.css'
+import SideNavBar from "@/component/SideNavBar";
 
 function App() {
   return (
     <h1 className="text-3xl font-bold underline">
-      Hello world!
+      <SideNavBar />
     </h1>
   )
 }
