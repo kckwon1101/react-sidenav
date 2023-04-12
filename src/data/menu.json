@@ -2,34 +2,34 @@
   {
     "id": 1,
     "label": "Menu 1",
-    "link": "/menu1",
+    "link": "/dashboard/1",
     "subMenu": [
       {
         "id": 11,
         "label": "Sub Menu 1-1",
-        "link": "/menu1/submenu1"
+        "link": "/dashboard/1-1"
       },
       {
         "id": 12,
         "label": "Sub Menu 1-2",
-        "link": "/menu1/submenu2"
+        "link": "/dashboard/1-2"
       }
     ]
   },
   {
     "id": 2,
     "label": "Menu 2",
-    "link": "/menu2"
+    "link": "/dashboard/2"
   },
   {
     "id": 3,
     "label": "Menu 3",
-    "link": "/menu3",
+    "link": "/dashboard/3",
     "subMenu": [
       {
         "id": 31,
         "label": "Sub Menu 3-1",
-        "link": "/menu3/submenu1"
+        "link": "/dashboard/3-1"
       }
     ]
   }

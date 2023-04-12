@@ -46,3 +46,10 @@ index.css
 @tailwind components;
 @tailwind utilities;
 ```
+
+## Install Router
+
+```
+npm install react-router-dom
+```
+
