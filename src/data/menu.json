@@ -19,7 +19,19 @@
   {
     "id": 2,
     "label": "Menu 2",
-    "link": "/dashboard/2"
+    "link": "/dashboard/2",
+    "subMenu": [
+      {
+        "id": 11,
+        "label": "Sub Menu 2-1",
+        "link": "/dashboard/2-1"
+      },
+      {
+        "id": 12,
+        "label": "Sub Menu 2-2",
+        "link": "/dashboard/2-2"
+      }
+    ]
   },
   {
     "id": 3,
