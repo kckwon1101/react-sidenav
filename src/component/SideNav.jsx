@@ -1,5 +1,6 @@
 import menuData from '@/data/menu.json';
 import MenuItem from "@/component/MenuItem";
+import {Link} from "react-router-dom";
 
 const SideNav = () => {
 
@@ -13,7 +14,7 @@ const SideNav = () => {
               <div>IMG</div>
             </div>
             <div className="flex justify-center items-center w-[150px]">
-              <span className="text-white text-2xl font-bold">DAVID</span>
+              <Link to="/" className="text-white text-2xl font-bold">DAVID</Link>
             </div>
           </div>
 
