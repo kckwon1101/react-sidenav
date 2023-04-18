@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const SideNav = () => {
 
   return (
-    <div className="flex">
+    <div className="flex w-[250px]">
       <div className="flex flex-auto justify-center bg-gray-800">
         <div className="w-[210px]">
           {/* Logo & Main Title*/}

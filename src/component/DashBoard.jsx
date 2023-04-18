@@ -1,32 +1,32 @@
-import { useParams } from "react-router-dom";
-import { useRef, useEffect } from 'react';
-
-const { tableau } = window;
+import { useParams, useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import QueryString from 'qs';
 
 const DashBoard = () => {
   const { dashboardName } = useParams();
-  const ref = useRef(null)
+  const location = useLocation();
+  const queryData = QueryString.parse(location.search, { ignoreQueryPrefix: true });
+  console.log(location);
+  console.log(queryData.url);
+  console.log(queryData.url === '');
+  useEffect(() => {
 
-  const url = 'http://public.tableau.com/views/RegionalSampleWorkbook/Storms'
-  const options = {
-    hideTabs: true,
-    onFirstInteractive: function () {
-      console.log("Run this code when the viz has finished loading.");
-    }
-  };
+  }, [dashboardName]);
 
-  const initViz = () => {
-    new tableau.Viz(ref.current, url, options);
+  if (queryData.url === undefined || queryData.url === '') {
+    return (
+      <div>Has No Tableau URL</div>
+    )
   }
 
-  // useEffect(() => {
-  //   initViz();
-  // }, []);
-
   return (
-    <div>
-      <h1>This is Tableau dashboard - {dashboardName}</h1>
-      <div ref={ref} />
+    <div className="">
+      <tableau-viz id="tableauViz"
+                   src={queryData.url || ''}
+                   toolbar="bottom"
+                   width="300px"
+      >
+      </tableau-viz>
     </div>
   );
 };

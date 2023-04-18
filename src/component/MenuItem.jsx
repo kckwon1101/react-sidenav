@@ -33,7 +33,7 @@ const MenuItem = (props) => {
         {menu.subMenu.map((subMenu) => (
           <li key={subMenu.id}>
             <NavLink
-              to={subMenu.link}
+              to={subMenu.link + `?url=${subMenu.tableau_url || ''}`}
               className={({isActive}) => isActive ? active : notActive}
             >
               {subMenu.label}
